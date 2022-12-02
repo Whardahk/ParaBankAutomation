@@ -1,0 +1,14 @@
+{
+  "name": "parabankautomation",
+  "version": "1.0.0",
+  "description": "cypress UI automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "whardah",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^11.2.0"
+  }
+}
