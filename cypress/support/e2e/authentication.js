@@ -61,5 +61,3 @@ describe("Logout Function", () => {
     cy.contains("Log Out").click();
   });
 });
-
-describe("Login Function");
