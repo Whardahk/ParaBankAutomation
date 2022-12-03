@@ -1,4 +1,5 @@
 import * as element from "../../pageElement/accountUser";
+import * as data from "../../data/dataUser";
 
 describe("Para Bank Test Authentication", () => {
   it("Visit Para Bank Web", () => {
@@ -8,18 +9,18 @@ describe("Para Bank Test Authentication", () => {
     cy.contains("Register").click();
     cy.contains("Signing up is easy!");
     //Input Register Form
-    cy.get(element.register.firstName).type("as");
-    cy.get(element.register.lastName).type("as");
-    cy.get(element.register.address).type("as");
-    cy.get(element.register.city).type("as");
-    cy.get(element.register.state).type("as");
-    cy.get(element.register.zipCode).type("as");
-    cy.get(element.register.phone).type("as");
-    cy.get(element.register.ssn).type("as");
+    cy.get(element.register.firstName).type(data.userData.firstName);
+    cy.get(element.register.lastName).type(data.userData.lastName);
+    cy.get(element.register.address).type(data.userData.address);
+    cy.get(element.register.city).type(data.userData.city);
+    cy.get(element.register.state).type(data.userData.state);
+    cy.get(element.register.zipCode).type(data.userData.zipCode);
+    cy.get(element.register.phone).type(data.userData.phone);
+    cy.get(element.register.ssn).type(data.userData.ssn);
 
-    cy.get(element.register.username).type("ok");
-    cy.get(element.register.password).type("ok");
-    cy.get(element.register.confirm).type("ap");
+    cy.get(element.register.username).type(data.userData.username);
+    cy.get(element.register.password).type(data.userData.password);
+    cy.get(element.register.confirm).type(data.userData.invalidConfirm);
 
     cy.get(element.button).contains(element.register.btnRegister).click();
 
@@ -29,24 +30,22 @@ describe("Para Bank Test Authentication", () => {
   it("Successfully Register New Customer", () => {
     cy.contains("Signing up is easy!");
     //Input Register Form
-    cy.get(element.register.firstName).type("as");
-    cy.get(element.register.lastName).type("as");
-    cy.get(element.register.address).type("as");
-    cy.get(element.register.city).type("as");
-    cy.get(element.register.state).type("as");
-    cy.get(element.register.zipCode).type("as");
-    cy.get(element.register.phone).type("as");
-    cy.get(element.register.ssn).type("as");
+    cy.get(element.register.firstName).type(data.userData.firstName);
+    cy.get(element.register.lastName).type(data.userData.lastName);
+    cy.get(element.register.address).type(data.userData.address);
+    cy.get(element.register.city).type(data.userData.city);
+    cy.get(element.register.state).type(data.userData.state);
+    cy.get(element.register.zipCode).type(data.userData.zipCode);
+    cy.get(element.register.phone).type(data.userData.phone);
+    cy.get(element.register.ssn).type(data.userData.ssn);
 
-    cy.get(element.register.username).type("ap");
-    cy.get(element.register.password).type("ap");
-    cy.get(element.register.confirm).type("ap");
+    cy.get(element.register.username).type(data.userData.username);
+    cy.get(element.register.password).type(data.userData.password);
+    cy.get(element.register.confirm).type(data.userData.validConfirm);
 
     cy.get(element.button).contains(element.register.btnRegister).click();
 
     //Successfully Registered
-    var firstName = "as";
-    var lastName = "as";
-    cy.contains(`Welcome ${firstName} ${lastName}`);
+    cy.contains(`Welcome ${data.userData.firstName} ${data.userData.lastName}`);
   });
 });
