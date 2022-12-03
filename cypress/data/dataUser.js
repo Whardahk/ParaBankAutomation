@@ -1,6 +1,6 @@
 export const validUser = {
-  username: "whardah",
-  password: "password",
+  username: "whardah3",
+  password: "password3",
 };
 
 export const invalidUser = {
@@ -9,16 +9,16 @@ export const invalidUser = {
 };
 
 export const userData = {
-  firstName: "Whardah",
-  lastName: "Ksm",
-  address: "Sesame St",
-  city: "Seoul",
-  state: "Korea",
-  zipCode: "3000",
-  phone: "012345678",
-  ssn: "123987",
-  username: "whardah",
-  password: "password",
-  validConfirm: "password",
-  invalidConfirm: "123",
+  firstName: "Whardah3",
+  lastName: "Ksm3",
+  address: "Sesame St3",
+  city: "Seoul3",
+  state: "Korea3",
+  zipCode: "30003",
+  phone: "0123456783",
+  ssn: "1239873",
+  username: "whardah3",
+  password: "password3",
+  validConfirm: "password3",
+  invalidConfirm: "1233",
 };

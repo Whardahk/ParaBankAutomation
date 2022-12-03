@@ -20,3 +20,14 @@ export const register = {
   confirm: 'input[name="repeatedPassword',
   btnRegister: "Register",
 };
+
+export const forgot = {
+  firstName: 'input[name="firstName"]',
+  lastName: 'input[name="lastName"]',
+  address: 'input[name="address.street"]',
+  city: 'input[name="address.city"]',
+  state: 'input[name="address.state"]',
+  zipCode: 'input[name="address.zipCode"]',
+  ssn: 'input[name="ssn"]',
+  btnForgot: "Find My Login Info",
+};
