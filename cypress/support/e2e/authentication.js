@@ -5,6 +5,9 @@ describe("Para Bank Test Authentication", () => {
   it("Visit Para Bank Web", () => {
     cy.visit("https://parabank.parasoft.com/parabank/index.htm");
   });
+});
+
+describe("Register New Customer", () => {
   it("Unsuccessfully Register New Customer", () => {
     cy.contains("Register").click();
     cy.contains("Signing up is easy!");
@@ -27,7 +30,9 @@ describe("Para Bank Test Authentication", () => {
     //Unsuccessfully Registered
     cy.contains("Passwords did not match.");
   });
+
   it("Successfully Register New Customer", () => {
+    cy.contains("Register").click();
     cy.contains("Signing up is easy!");
     //Input Register Form
     cy.get(element.register.firstName).type(data.userData.firstName);
@@ -49,3 +54,12 @@ describe("Para Bank Test Authentication", () => {
     cy.contains(`Welcome ${data.userData.firstName} ${data.userData.lastName}`);
   });
 });
+
+describe("Logout Function", () => {
+  it("In Login Condition and Logout the account", () => {
+    cy.contains(`Welcome ${data.userData.firstName} ${data.userData.lastName}`);
+    cy.contains("Log Out").click();
+  });
+});
+
+describe("Login Function");
