@@ -1,11 +1,13 @@
-# ParaBankAutomation
+# ParaBankAutomation use Cypress
 
 How to install:
-npm init;
-npm install cypress;
+
+- npm init
+- npm install cypress
 
 How to run:
-npm cypress run; or npm cypress open;
+
+- npm cypress run or npm cypress open
 
 Documentation:
 Testcase & Web Selector: https://docs.google.com/spreadsheets/d/1BToyaJpBJJ01BMRTIzByRVws-KH6WkCOmj9-RHjUDZs/edit?usp=sharing
