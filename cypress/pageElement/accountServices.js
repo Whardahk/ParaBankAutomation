@@ -6,3 +6,8 @@ export const newAccount = {
   selectAccount: "select[id=fromAccountId]",
   btnOpen: "#rightPanel > div > div > form > div > input",
 };
+
+export const accountsOverview = {
+  btnAccountView: "#leftPanel > ul > li:nth-child(2) > a",
+  accountId: "#accountTable > tbody > tr:nth-child(1) > td:nth-child(1) > a",
+};
