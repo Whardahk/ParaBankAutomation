@@ -5,9 +5,11 @@ import * as data from "../../data/dataUser";
 describe("Open New Account", () => {
   it("Verivy user can Open New Account", () => {
     cy.visit("https://parabank.parasoft.com/parabank/index.htm");
+    //Login
     cy.get(element.login.username).type("rt");
     cy.get(element.login.password).type("rt");
     cy.get(element.button).contains(element.login.btnLogin).click();
+    //Open New Account
     cy.get(elServices.newAccount.btnNewAccount).click();
     cy.get(elServices.newAccount.selectType)
       .select("SAVINGS")
